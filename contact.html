@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact With Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Space Explorer</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="chatbot_ai.html">ChatBot</a>
+          <a href="topics.html">Topics</a>
+        </div>
+      </nav>
+      
+      <div class="contact-container">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p style="margin: 1rem 0">Have questions or feedback? We'd love to hear from you!</p>
+          
+          <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+          
+          <div class="success-message" id="successMessage">
+            Your message has been sent successfully! We'll get back to you soon.
+          </div>
+          
+          <div class="error-message" id="errorMessage">
+            There was an error sending your message. Please try again later.
+          </div>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Galaxy Youth</h3>
+            <p>Galaxy Youth is a passionate group of young space lovers dedicated to making space science accessible and exciting for everyone. Join our community of young explorers!</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="topics.html#nasa_other_topics">Nasa & Other Resources</a>
+            <a href="topics.html#vid">Videos For Leaaring About Space </a>
+            <a href="topics.html#ebooks">Digital Books</a>
+          </div>
+          <div class="footer-section">
+            <h3>Other</h3>
+            <a href="https://science.nasa.gov/learn/events-activities/"> Nasa Youth Events</a>
+            <a href="commuinty.html">Community</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Galaxy Youth Space Explorer. All rights reserved.</p>
+        </div>
+      </footer>
+      
+      <script src="js/contact.js">
+      </script>
+</body>
+</html>
