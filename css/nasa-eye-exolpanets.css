@@ -55,7 +55,7 @@ body {
 }
 
 /* Iframe container for chat - positioning and layout */
-#iframe_chat {
+#nasa_iframe {
   margin: 2%;  /* add margin around the iframe */
   margin-top: 6%;  /* space above the iframe */
   max-width: 1400px;  /* maximum width */
@@ -63,7 +63,7 @@ body {
 }
 
 /* Chat iframe styling - specific size, border, and background */
-#chat {
+#n_iframe {
   width: 1300px;  /* set the width of the iframe */
   height: 1000px;  /* set the height of the iframe */
   border-radius: 15px;  /* rounded corners for iframe */
