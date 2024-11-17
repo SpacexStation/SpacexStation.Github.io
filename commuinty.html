@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding and viewport settings for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title shown on the browser tab -->
+    <title>Chat with Others</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="css/commuinty.css">
+</head>
+<body>
+
+    <!-- Navigation bar with links to other pages -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Space Station</a> <!-- Logo link back to the homepage -->
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="chatbot_ai.html">GY AI</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Description section for the chat feature -->
+    <div class="description">
+        <h1>Chat with Others</h1>
+        <p>Chat with other researchers and learn more about space.</p>
+    </div>
+
+    <!-- Embed Dead Simple Chat iframe -->
+    <div id="iframe_chat">
+        <iframe 
+            src="https://deadsimplechat.com/EKtCvLCFF"  <!-- Link to the chat room -->
+            id="chat"
+            title="Chat with Others"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Footer section with information about Galaxy Youth and quick links -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- About section in the footer -->
+            <div class="footer-section">
+                <h3>About Galaxy Youth</h3>
+                <p>Galaxy Youth is a passionate group of young space lovers dedicated to making space science accessible and exciting for everyone. Join our community of young explorers!</p>
+            </div>
+
+            <!-- Quick links section -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="topics.html#nasa_other_topics">NASA & Other Resources</a>
+                <a href="topics.html#vid">Videos For Learning About Space</a> <!-- Fixed typo 'Leaaring' to 'Learning' -->
+                <a href="topics.html#ebooks">Digital Books</a>
+            </div>
+            
+            <!-- Other useful links section -->
+            <div class="footer-section">
+                <h3>Other</h3>
+                <a href="https://science.nasa.gov/learn/events-activities/">NASA Youth Events</a>
+                <a href="commuinty.html">Community</a> <!-- Fixed typo 'commuinty' to 'community' -->
+                <a href="nasa-eye-exolpanets.html">Exoplanets Explorer</a> <!-- Fixed typo 'Exolporer' to 'Explorer' -->
+            </div>
+        </div>
+
+        <!-- Footer bottom section with copyright info -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Galaxy Youth Space Station. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript SDK for Dead Simple Chat -->
+    <script src="https://cdn.deadsimplechat.com/sdk/1.2.1/dschatsdk.min.js"></script>
+</body>
+</html>

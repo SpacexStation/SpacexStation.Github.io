@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Setting the character encoding to UTF-8 and enabling responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title that appears in the browser tab -->
+    <title>Galaxy Youth AI</title>
+    
+    <!-- Link to external CSS stylesheet for the page -->
+    <link rel="stylesheet" href="css/chatbot_ai.css">
+    
+    <!-- Importing the Poppins font from Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Import map for using Google Generative AI -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+<body>
+    
+    <!-- Navigation bar linking to other pages -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Space Station</a> <!-- Logo link back to homepage -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="topics.html">Topics</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+  
+    <!-- Chatbot container -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat with Space Explorer Bot</h1>
+            <p>Ask questions about space, astronomy, and the cosmos!</p>
+        </div>
+        
+        <!-- Container where chat messages are displayed -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Hello! I'm your Space Explorer AI. Ask me anything about space and astronomy!
+            </div>
+        </div>
+        
+        <!-- Typing indicator displayed while waiting for bot response -->
+        <div class="typing-indicator" id="typingIndicator">Bot is typing...</div>
+        
+        <!-- Chat input area where user types their message -->
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <!-- Button to send the message -->
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+  
+    <!-- Footer with quick links and information about the site -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Galaxy Youth</h3>
+                <p>Galaxy Youth is a passionate group of young space lovers dedicated to making space science accessible and exciting for everyone. Join our community of young explorers!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="topics.html#nasa_other_topics">NASA & Other Resources</a>
+                <a href="topics.html#vid">Videos For Learning About Space</a> <!-- Fixed typo 'Leaaring' to 'Learning' -->
+                <a href="topics.html#ebooks">Digital Books</a>
+            </div>
+            <div class="footer-section">
+                <h3>Other</h3>
+                <a href="https://science.nasa.gov/learn/events-activities/">NASA Youth Events</a>
+                <a href="commuinty.html">Community</a> <!-- Fixed typo 'commuinty' to 'community' -->
+                <a href="nasa-eye-exolpanets.html">Exoplanets Explorer</a> <!-- Fixed typo 'Exolporer' to 'Explorer' -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Galaxy Youth Space Station. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript code for handling the chat logic -->
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai"; // Importing the Google Generative AI library
+
+      // Initialize the Google AI model with the API key
+      const genAI = new GoogleGenerativeAI('AIzaSyAAz3dvPFaZ4_BVAcjEbLf2cWCTrfAzviQ');
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+      // Function to handle the sending of messages
+      async function sendMessage() {
+        const input = document.getElementById('userInput');
+        const message = input.value.trim().toLowerCase();  // Get the user's input and format it
+        
+        if (message) {
+          // Display user message
+          addMessage(message, 'user-message');
+          input.value = ''; // Clear the input field
+          
+          // Show the typing indicator while waiting for the bot's response
+          const typingIndicator = document.getElementById('typingIndicator');
+          typingIndicator.style.display = 'block';
+          
+          // Simulate a short delay before bot responds
+          setTimeout(async () => {
+            typingIndicator.style.display = 'none'; // Hide typing indicator
+            
+            // Get AI's response from the generative model
+            const result = await model.generateContent(message);
+            addMessage(result.response.text(), 'bot-message'); // Display AI response in the chat
+          }, 1000);
+        }
+      }
+      
+      // Function to add a new message to the chat interface
+      function addMessage(text, className) {
+        const messagesDiv = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${className}`;
+        messageDiv.textContent = text;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to the bottom
+      }
+      
+      // Allow the Enter key to trigger message send
+      document.getElementById('userInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          sendMessage();
+        }
+      });
+
+      // Send the message when the Send button is clicked
+      document.getElementById('sendButton').addEventListener('click', sendMessage);
+    </script>
+
+</body>
+</html>

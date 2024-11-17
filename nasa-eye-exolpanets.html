@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags to set up the character encoding and viewport for mobile responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title: Corrected typo from "Exolpor" to "Explore" -->
+    <title>Explore Exoplanets</title>
+
+    <!-- Linking to external CSS for styling -->
+    <link rel="stylesheet" href="css/nasa-eye-exolpanets.css">
+</head>
+<body>
+
+<!-- Navigation bar with links to other pages of the website -->
+<nav class="navbar">
+  <!-- Logo link back to the homepage -->
+  <a href="index.html" class="nav-logo">Space Station</a>
+  
+  <!-- Navigation links for the website's main sections -->
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="chatbot_ai.html">GY AI</a>
+    <a href="topics.html">Topics</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Section describing the NASA Eyes on Exoplanets tool -->
+<div class="description">
+    <h1>NASA Eyes on Exoplanets</h1>
+    
+    <!-- Introduction to the Exoplanets tool -->
+    <p>
+      Explore the wonders of exoplanets discovered by NASA's TESS mission and other space telescopes. <br>
+      This interactive tool allows you to visualize and learn about planets orbiting other stars in our galaxy.<br>
+    </p>
+
+    <!-- Instructions for using the interactive viewer -->
+    <p>
+      Use the interactive viewer below to explore the fascinating world of exoplanets. <br>
+      You can filter discoveries, <br>
+      view detailed information about each planet, and see their relative sizes and orbits.
+    </p>
+</div>
+
+<!-- Section to embed the NASA Eyes on Exoplanets interactive iframe -->
+<div id="iframe_chat">
+    <iframe 
+    id="chat" 
+    src="https://eyes.nasa.gov/apps/exo/#/filter/TESSAllDiscoveries" 
+    title="NASA Eyes on Exoplanets Interactive Viewer"
+    
+    <!-- Specifying allowed features in the iframe for better functionality -->
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    <!-- Making the iframe responsive by setting width to 100% and height to 600px -->
+    style="width: 100%; height: 600px;">
+    </iframe>
+</div>
+
+<!-- Footer section of the page with useful information and links -->
+<footer class="footer">
+  <div class="footer-content">
+    
+    <!-- About Galaxy Youth section -->
+    <div class="footer-section">
+      <h3>About Galaxy Youth</h3>
+      <p>Galaxy Youth is a passionate group of young space lovers dedicated to making space science accessible and exciting for everyone. Join our community of young explorers!</p>
+    </div>
+    
+    <!-- Quick Links to other resources on the website -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="topics.html#nasa_other_topics">Nasa & Other Resources</a>
+      <a href="topics.html#vid">Videos For Learning About Space</a> <!-- Fixed typo here from 'Leaaring' to 'Learning' -->
+      <a href="topics.html#ebooks">Digital Books</a>
+    </div>
+    
+    <!-- Other useful links section -->
+    <div class="footer-section">
+      <h3>Other</h3>
+      <a href="https://science.nasa.gov/learn/events-activities/">NASA Youth Events</a>
+      <a href="community.html">Community</a> <!-- Fixed typo here from 'commuinty' to 'community' -->
+      <a href="nasa-eye-exoplanets.html">Exoplanets Explorer</a> <!-- Fixed typo here from 'Exolporer' to 'Explorer' -->
+    </div>
+  </div>
+  
+  <!-- Footer bottom with copyright information -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Galaxy Youth Space Station. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Loading external JavaScript for chat functionality (if needed) -->
+<script src="https://cdn.deadsimplechat.com/sdk/1.2.1/dschatsdk.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Reset all default margin, padding, and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* ensures that padding and border are included in width/height calculations */
+  font-family: 'Poppins', sans-serif;  /* set default font for the page */
+}
+
+/* Body styling - background gradient and text color */
+body {
+  background: linear-gradient(135deg, #1a0033 0%, #000000 100%);  /* diagonal gradient from dark purple to black */
+  color: #fff;  /* white text color */
+  min-height: 100vh;  /* ensure the body takes up at least the full height of the viewport */
+}
+
+/* Navbar styling - fixed position at the top */
+.navbar {
+  position: fixed;  /* keep navbar at the top */
+  top: 0;
+  width: 100%;
+  display: flex;  /* use flexbox for navbar layout */
+  justify-content: space-between;  /* space out elements in the navbar */
+  align-items: center;  /* vertically align items */
+  padding: 1rem 4rem;  /* add padding to the navbar */
+  background: rgba(26, 0, 51, 0.95);  /* semi-transparent dark purple background */
+  backdrop-filter: blur(10px);  /* apply blur effect to the background behind the navbar */
+  z-index: 1000;  /* ensure navbar is always on top of other elements */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  /* add subtle shadow to navbar */
+}
+
+/* Navbar logo styling */
+.nav-logo {
+  color: #fff;  /* set logo text color to white */
+  text-decoration: none;  /* remove underline from logo */
+  font-size: 1.5rem;  /* make logo text size larger */
+  font-weight: 600;  /* set logo font weight to bold */
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex;  /* use flexbox for the links */
+  gap: 2rem;  /* add space between each link */
+}
+
+/* Navbar links styling */
+.nav-links a {
+  color: #fff;  /* white text color for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change on hover */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #9933ff;  /* change link color to purple when hovered */
+}
+
+/* Content container with a maximum width */
+.content-container {
+  max-width: 1200px;  /* limit content width */
+  margin: 8rem auto 4rem;  /* add top margin and center the content */
+  padding: 2rem;  /* add padding inside the container */
+}
+
+/* General content section styling */
+.content-section {
+  background: rgba(255, 255, 255, 0.05);  /* subtle white background with transparency */
+  border-radius: 15px;  /* rounded corners */
+  padding: 2rem;  /* add padding inside the section */
+  margin-bottom: 2rem;  /* add bottom margin */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* add shadow effect to the section */
+}
+
+/* Different sections with specific border colors */
+.downloads-section {
+  border-left: 4px solid #9933ff;  /* purple left border for downloads section */
+}
+
+.videos-section {
+  border-left: 4px solid #ff3366;  /* pink left border for videos section */
+}
+
+.books-section {
+  border-left: 4px solid #33ff99;  /* green left border for books section */
+}
+
+/* Content grid layout */
+.content-grid {
+  display: grid;  /* use grid layout for content */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* create responsive columns */
+  gap: 1.5rem;  /* space between grid items */
+  margin-top: 1.5rem;  /* space above the grid */
+}
+
+/* Individual content cards */
+.content-card {
+  background: rgba(255, 255, 255, 0.1);  /* slightly transparent white background */
+  border-radius: 10px;  /* rounded corners for cards */
+  padding: 1rem;  /* padding inside the card */
+  cursor: pointer;  /* change cursor to pointer on hover */
+  transition: transform 0.3s;  /* smooth transition for transformation effect */
+}
+
+/* Hover effect for content cards */
+.content-card:hover {
+  transform: translateY(-5px);  /* lift the card slightly on hover */
+}
+
+/* Styling for iframe overlay container */
+.iframe-container {
+  position: fixed;  /* fixed position to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);  /* dark background with slight transparency */
+  display: none;  /* hidden by default */
+  z-index: 1001;  /* ensure the iframe is on top */
+}
+
+/* Styling for iframe content inside overlay */
+.iframe-content {
+  position: relative;
+  width: 90%;  /* set iframe content width */
+  height: 90%;  /* set iframe content height */
+  margin: 2% auto;  /* center the iframe content */
+}
+
+/* Close button for the iframe overlay */
+.close-iframe {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: white;  /* white color for close button */
+  font-size: 2rem;  /* larger font size for the close button */
+  cursor: pointer;  /* pointer cursor on hover */
+  z-index: 1002;  /* ensure close button is above iframe */
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(26, 0, 51, 0.95);  /* same background color as navbar */
+  padding: 3rem 0 1rem;  /* padding for the footer */
+  margin-top: 4rem;  /* space above the footer */
+}
+
+/* Footer content container */
+.footer-content {
+  max-width: 1200px;  /* limit the width of footer content */
+  margin: 0 auto;  /* center the footer content */
+  display: grid;  /* use grid layout for footer sections */
+  grid-template-columns: repeat(3, 1fr);  /* three equal columns */
+  gap: 2rem;  /* space between sections */
+  padding: 0 2rem;  /* add padding inside the container */
+}
+
+/* Footer section styling */
+.footer-section {
+  display: flex;  /* use flexbox inside each footer section */
+  flex-direction: column;  /* stack items vertically */
+  gap: 1rem;  /* space between items */
+}
+
+/* Footer section titles */
+.footer-section h3 {
+  color: #9933ff;  /* purple color for section titles */
+  margin-bottom: 1rem;  /* margin below the title */
+}
+
+/* Footer links styling */
+.footer-section a {
+  color: #ccc;  /* light grey color for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change */
+}
+
+/* Hover effect for footer links */
+.footer-section a:hover {
+  color: #9933ff;  /* change link color to purple on hover */
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+  text-align: center;  /* center the text */
+  margin-top: 2rem;  /* space above footer bottom */
+  padding-top: 2rem;  /* space below the content */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);  /* subtle border on top */
+}
+
+/* Refused links styling */
+.refused_links {
+  color: white;  /* white text color */
+}
+
+/* Highlighted text (marked) */
+mark {
+  background: red;  /* red background for highlighted text */
+  font-size: larger;  /* larger font size for marked text */
+}

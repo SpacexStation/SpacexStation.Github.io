@@ -1,0 +1,146 @@
+/* Reset all default margin, padding, and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* ensures that padding and border are included in width/height calculations */
+  font-family: 'Poppins', sans-serif;  /* set default font for the page */
+}
+
+/* Body styling - background gradient and text color */
+body {
+  background: linear-gradient(135deg, #1a0033 0%, #000000 100%);  /* diagonal gradient from dark purple to black */
+  color: #fff;  /* white text color */
+  min-height: 100vh;  /* ensure the body takes up at least the full height of the viewport */
+}
+
+/* Navbar styling - fixed position at the top */
+.navbar {
+  position: fixed;  /* keep navbar at the top */
+  top: 0;
+  width: 100%;
+  display: flex;  /* use flexbox for navbar layout */
+  justify-content: space-between;  /* space out elements in the navbar */
+  align-items: center;  /* vertically align items */
+  padding: 1rem 4rem;  /* add padding to the navbar */
+  background: rgba(26, 0, 51, 0.95);  /* semi-transparent dark purple background */
+  backdrop-filter: blur(10px);  /* apply blur effect to the background behind the navbar */
+  z-index: 1000;  /* ensure navbar is always on top of other elements */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  /* add subtle shadow to navbar */
+}
+
+/* Navbar logo styling */
+.nav-logo {
+  color: #fff;  /* set logo text color to white */
+  text-decoration: none;  /* remove underline from logo */
+  font-size: 1.5rem;  /* make logo text size larger */
+  font-weight: 600;  /* set logo font weight to bold */
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex;  /* use flexbox for the links */
+  gap: 2rem;  /* add space between each link */
+}
+
+/* Navbar links styling */
+.nav-links a {
+  color: #fff;  /* white text color for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change on hover */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #9933ff;  /* change link color to purple when hovered */
+}
+
+/* Iframe container for chat - positioning and layout */
+#iframe_chat {
+  margin: 2%;  /* add margin around the iframe */
+  margin-top: 6%;  /* space above the iframe */
+  max-width: 1400px;  /* maximum width */
+  max-width: 1100px;  /* redundant, keeps the width at most 1100px (should remove the first line) */
+}
+
+/* Chat iframe styling - specific size, border, and background */
+#chat {
+  width: 1300px;  /* set the width of the iframe */
+  height: 1000px;  /* set the height of the iframe */
+  border-radius: 15px;  /* rounded corners for iframe */
+  border: 2px solid #9933ff;  /* purple border around the iframe */
+  box-shadow: 0 0 30px rgba(169, 64, 255, 0.3);  /* glowing effect around iframe */
+  background: rgba(144, 95, 179, 0.95);  /* semi-transparent purple background for the iframe */
+}
+
+/* Description section - centered text, background, and border styling */
+.description {
+  text-align: center;  /* center text inside the description */
+  margin: 2%;  /* margin around the description */
+  margin-top: 8%;  /* space above the description */
+  width: auto;  /* allow width to auto adjust */
+  height: auto;  /* allow height to auto adjust */
+  background: rgba(17, 1, 41, 0.95);  /* dark transparent background */
+  border-radius: 15px;  /* rounded corners */
+  border: 2px solid #752fec;  /* purple border */
+}
+
+/* Heading styling inside the description section */
+.description h1 {
+  color: #9933ff;  /* purple text color for the heading */
+  margin-bottom: 1rem;  /* space below the heading */
+}
+
+/* Paragraph styling inside the description section */
+.description p {
+  margin-bottom: 1rem;  /* space below the paragraph */
+}
+
+/* Footer section styling - background and padding */
+.footer {
+  background: rgba(26, 0, 51, 0.95);  /* same background color as navbar */
+  padding: 3rem 0 1rem;  /* padding for the footer */
+  margin-top: 4rem;  /* space above the footer */
+}
+
+/* Footer content container - grid layout */
+.footer-content {
+  max-width: 1200px;  /* limit the width of footer content */
+  margin: 0 auto;  /* center the footer content */
+  display: grid;  /* use grid layout for footer sections */
+  grid-template-columns: repeat(3, 1fr);  /* three equal columns */
+  gap: 2rem;  /* space between sections */
+  padding: 0 2rem;  /* add padding inside the container */
+}
+
+/* Individual footer section styling */
+.footer-section {
+  display: flex;  /* use flexbox inside each footer section */
+  flex-direction: column;  /* stack items vertically */
+  gap: 1rem;  /* space between items */
+}
+
+/* Footer section titles - purple color */
+.footer-section h3 {
+  color: #9933ff;  /* purple color for section titles */
+  margin-bottom: 1rem;  /* margin below the title */
+}
+
+/* Footer links styling */
+.footer-section a {
+  color: #ccc;  /* light grey color for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change */
+}
+
+/* Hover effect for footer links */
+.footer-section a:hover {
+  color: #9933ff;  /* change link color to purple on hover */
+}
+
+/* Footer bottom styling - centered text and border */
+.footer-bottom {
+  text-align: center;  /* center the text */
+  margin-top: 2rem;  /* space above footer bottom */
+  padding-top: 2rem;  /* space below the content */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);  /* subtle border on top */
+}

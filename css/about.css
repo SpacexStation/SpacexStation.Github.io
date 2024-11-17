@@ -1,0 +1,193 @@
+/* Global styles for resetting default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0; /* Remove all default margins */
+  padding: 0; /* Remove all default paddings */
+  box-sizing: border-box; /* Include padding and borders in element's total width/height */
+  font-family: 'Poppins', sans-serif; /* Set default font family to Poppins */
+}
+
+/* Body styling */
+body {
+  background: #000; /* Set the background color to black */
+  color: #fff; /* Set text color to white */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Hero section (banner at the top of the about page) */
+.about-hero {
+  min-height: 40vh; /* Set the minimum height to 40% of the viewport height */
+  background: linear-gradient(45deg, #1a0033, #4d0099); /* Gradient background from dark purple to lighter purple */
+  padding: 8rem 2rem 4rem; /* Add padding: top 8rem, sides 2rem, bottom 4rem */
+  text-align: center; /* Center-align text */
+}
+
+/* Team section container */
+.team-section {
+  max-width: 1200px; /* Max width of the section */
+  margin: 4rem auto; /* Center the section with 4rem top and bottom margins */
+  padding: 0 2rem; /* Add horizontal padding */
+}
+
+/* Grid layout for team members */
+.team-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust number of columns based on screen size */
+  gap: 3rem; /* Space between grid items */
+  margin-top: 3rem; /* Margin at the top of the grid */
+}
+
+/* Style for each team member container */
+.team-member {
+  background: rgba(255, 255, 255, 0.1); /* Lightly transparent white background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 2rem; /* Padding inside the container */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s; /* Smooth transition for transform effect */
+}
+
+/* Hover effect for team member cards */
+.team-member:hover {
+  transform: translateY(-10px); /* Move the card up slightly on hover */
+}
+
+/* Style for team member avatars (images) */
+.member-avatar {
+  width: 200px; /* Set width of avatar */
+  height: 200px; /* Set height of avatar */
+  margin: 0 auto 1.5rem; /* Center the avatar and add space below */
+}
+
+/* Style for avatar images (SVG or others) */
+.member-avatar svg {
+  width: 100%; /* Make the SVG fill the avatar container */
+  height: 100%; /* Make the SVG fill the avatar container */
+}
+
+/* Name styling for team members */
+.member-name {
+  color: #9933ff; /* Purple color for member name */
+  font-size: 1.5rem; /* Set font size */
+  margin-bottom: 0.5rem; /* Add space below the name */
+}
+
+/* Title (role) styling for team members */
+.member-title {
+  color: #666; /* Light gray color for member's title */
+  margin-bottom: 1rem; /* Space below the title */
+}
+
+/* Bio section styling for team members */
+.member-bio {
+  line-height: 1.6; /* Set line height for better readability */
+  margin-bottom: 1.5rem; /* Space below the bio */
+}
+
+/* Social media links styling */
+.social-links a {
+  color: #fff; /* White color for social media links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 0.5rem; /* Add horizontal space between links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for social media links */
+.social-links a:hover {
+  color: #9933ff; /* Change to purple when hovering over the links */
+}
+
+/* Navbar styling (fixed at the top) */
+.navbar {
+  position: fixed; /* Fix navbar at the top of the page */
+  top: 0; /* Align it to the top */
+  width: 100%; /* Full width of the viewport */
+  background: rgba(0, 4, 40, 0.9); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Apply blur effect to the background */
+  padding: 1rem 2rem; /* Padding inside the navbar */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space out the items (logo and links) */
+  align-items: center; /* Vertically center the items */
+  z-index: 1000; /* Ensure navbar stays above other elements */
+}
+
+/* Logo styling in the navbar */
+.nav-logo {
+  font-size: 1.5rem; /* Set font size */
+  font-weight: bold; /* Bold font weight */
+  color: #fff; /* White color */
+  text-decoration: none; /* Remove underline from logo */
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex; /* Flexbox layout for links */
+  gap: 2rem; /* Add space between links */
+}
+
+/* Navbar link styling */
+.nav-links a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for navbar links */
+.nav-links a:hover {
+  color: #9933ff; /* Change color to purple when hovering */
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(0, 4, 40, 0.9); /* Semi-transparent dark background */
+  padding: 3rem 2rem; /* Add padding inside the footer */
+  margin-top: 2rem; /* Space between footer and the main content */
+}
+
+/* Footer content container */
+.footer-content {
+  max-width: 1200px; /* Max width of the footer content */
+  margin: 0 auto; /* Center the content */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Add space between sections */
+}
+
+/* Footer section headings styling */
+.footer-section h3 {
+  color: #9933ff; /* Purple color for headings */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+/* Footer section text and link styling */
+.footer-section p, .footer-section a {
+  color: #fff; /* White text color for links and paragraphs */
+  line-height: 1.6; /* Set line height for readability */
+}
+
+/* Footer links styling */
+.footer-section a {
+  display: block; /* Make links block-level elements */
+  text-decoration: none; /* Remove underline */
+  margin-bottom: 0.5rem; /* Add space below each link */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for footer links */
+.footer-section a:hover {
+  color: #9933ff; /* Change color to purple on hover */
+}
+
+/* Footer bottom section styling */
+.footer-bottom {
+  text-align: center; /* Center-align text */
+  margin-top: 2rem; /* Add space above */
+  padding-top: 2rem; /* Padding at the top */
+  border-top: 1px solid rgba(255,255,255,0.1); /* Light border on top */
+}
+
+/* Styling for team member images (avatars) */
+.team_imgs {
+  width: 200px; /* Set the width of the image */
+  height: 200px; /* Set the height of the image */
+  border-radius: 100px; /* Make the image circular */
+  border: #000 5px solid; /* Add a solid black border around the image */
+}

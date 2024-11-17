@@ -1,0 +1,192 @@
+/* Reset default margin, padding, and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* ensures padding and border are included in width/height calculations */
+  font-family: 'Poppins', sans-serif;  /* set a default font for the page */
+}
+
+/* Body styling - background color and font color */
+body {
+  background: #000;  /* solid black background */
+  color: #fff;  /* white text color */
+  overflow-x: hidden;  /* prevent horizontal scrolling */
+}
+
+/* Hero section - full screen with a gradient background */
+.hero {
+  min-height: 100vh;  /* make the hero section at least 100% of the viewport height */
+  padding: 2rem;  /* add padding around the content */
+  background: linear-gradient(45deg, #1a0033, #4d0099);  /* diagonal gradient from dark purple to bright purple */
+  display: flex;  /* use flexbox for centering */
+  flex-direction: column;  /* stack items vertically */
+  align-items: center;  /* horizontally center content */
+  justify-content: center;  /* vertically center content */
+  text-align: center;  /* center the text inside the hero section */
+}
+
+/* Stars effect - positioned absolutely and take up the entire screen */
+.stars {
+  position: absolute;  /* position it relative to the nearest positioned ancestor */
+  width: 100%;  /* make it full width */
+  height: 100%;  /* make it full height */
+  pointer-events: none;  /* prevent interaction with the stars element */
+}
+
+/* Styling for main heading */
+h1 {
+  font-size: 3.5rem;  /* large font size */
+  margin-bottom: 1rem;  /* space below the heading */
+  animation: glow 2s ease-in-out infinite alternate;  /* glowing text animation */
+}
+
+/* Intro section with smaller text */
+.intro {
+  max-width: 800px;  /* limit the width of the intro text */
+  margin: 2rem auto;  /* center the intro section with margin */
+  font-size: 1.2rem;  /* slightly larger text */
+  line-height: 1.6;  /* increase line height for better readability */
+}
+
+/* Button styling for the explore button */
+.explore-btn {
+  padding: 1rem 2rem;  /* padding around the button */
+  font-size: 1.2rem;  /* button text size */
+  background: transparent;  /* transparent background */
+  border: 2px solid #fff;  /* white border */
+  color: #fff;  /* white text color */
+  border-radius: 30px;  /* rounded corners */
+  cursor: pointer;  /* cursor changes to pointer on hover */
+  transition: all 0.3s;  /* smooth transition for background color and scaling */
+  text-decoration: none;  /* remove underline */
+}
+
+/* Button hover effect */
+.explore-btn:hover {
+  background: #fff;  /* white background on hover */
+  color: #000428;  /* dark color text on hover */
+  transform: scale(1.1);  /* slightly enlarge the button */
+}
+
+/* Topics grid layout - responsive with auto-fitting columns */
+.topics {
+  display: grid;  /* grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* auto-fit columns with a minimum width of 300px */
+  gap: 2rem;  /* space between grid items */
+  padding: 4rem 2rem;  /* padding inside the container */
+  max-width: 1200px;  /* limit the width */
+  margin: 0 auto;  /* center the grid */
+}
+
+/* Topic card styling - for each topic card */
+.topic-card {
+  background: rgba(255, 255, 255, 0.1);  /* semi-transparent white background */
+  padding: 2rem;  /* padding inside the card */
+  border-radius: 15px;  /* rounded corners */
+  backdrop-filter: blur(10px);  /* blurred background effect */
+  transition: transform 0.3s;  /* smooth transition for the hover effect */
+}
+
+/* Hover effect for the topic card */
+.topic-card:hover {
+  transform: translateY(-10px);  /* lift the card slightly when hovered */
+}
+
+/* Keyframes for glowing text animation */
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9933ff;  /* starting glow effect */
+  }
+  to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #9933ff, 0 0 40px #9933ff;  /* stronger glow effect */
+  }
+}
+
+/* Navbar styles - fixed to the top with a transparent background */
+.navbar {
+  position: fixed;  /* fixed position at the top */
+  top: 0;
+  width: 100%;  /* full width */
+  background: rgba(0, 4, 40, 0.9);  /* dark blue background with transparency */
+  backdrop-filter: blur(10px);  /* blur effect on the background */
+  padding: 1rem 2rem;  /* padding inside the navbar */
+  display: flex;  /* use flexbox for navbar layout */
+  justify-content: space-between;  /* space out navbar items */
+  align-items: center;  /* vertically center items */
+  z-index: 1000;  /* ensure navbar stays on top */
+}
+
+/* Navbar logo styling */
+.nav-logo {
+  font-size: 1.5rem;  /* font size for the logo */
+  font-weight: bold;  /* bold font for the logo */
+  color: #fff;  /* white color for the logo */
+  text-decoration: none;  /* remove underline from logo */
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex;  /* use flexbox for links */
+  gap: 2rem;  /* space between links */
+}
+
+/* Navbar link styling */
+.nav-links a {
+  color: #fff;  /* white text for the links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change */
+}
+
+/* Navbar link hover effect */
+.nav-links a:hover {
+  color: #9933ff;  /* change color to purple when hovered */
+}
+
+/* Footer section styling */
+.footer {
+  background: rgba(0, 4, 40, 0.9);  /* same background as the navbar */
+  padding: 3rem 2rem;  /* padding inside the footer */
+  margin-top: 2rem;  /* space above the footer */
+}
+
+/* Footer content grid layout */
+.footer-content {
+  max-width: 1200px;  /* limit the width of the footer content */
+  margin: 0 auto;  /* center the content */
+  display: grid;  /* use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* auto-fit columns with minimum width of 250px */
+  gap: 2rem;  /* space between sections */
+}
+
+/* Footer section heading styling */
+.footer-section h3 {
+  color: #9933ff;  /* purple color for section headings */
+  margin-bottom: 1rem;  /* margin below the heading */
+}
+
+/* Footer section paragraph and link styling */
+.footer-section p, .footer-section a {
+  color: #fff;  /* white color for text and links */
+  line-height: 1.6;  /* increase line height for readability */
+}
+
+/* Footer section link styling */
+.footer-section a {
+  display: block;  /* make links block-level elements */
+  text-decoration: none;  /* remove underline from links */
+  margin-bottom: 0.5rem;  /* space below each link */
+  transition: color 0.3s;  /* smooth transition for color change */
+}
+
+/* Footer link hover effect */
+.footer-section a:hover {
+  color: #9933ff;  /* change color to purple when hovered */
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+  text-align: center;  /* center the text */
+  margin-top: 2rem;  /* space above the footer bottom */
+  padding-top: 2rem;  /* padding inside the footer bottom */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);  /* subtle border on top */
+}

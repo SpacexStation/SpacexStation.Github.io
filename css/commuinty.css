@@ -1,0 +1,222 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* ensures padding and borders are included in width/height calculations */
+  font-family: 'Poppins', sans-serif;  /* set a default font for the page */
+}
+
+/* Body styling - background gradient and text color */
+body {
+  background: linear-gradient(135deg, #1a0033 0%, #000000 100%);  /* gradient background from purple to black */
+  color: #fff;  /* white text color */
+  min-height: 100vh;  /* ensure the body covers the full viewport height */
+}
+
+/* Navbar styling - fixed at the top with a background and shadow */
+.navbar {
+  position: fixed;  /* fixed position at the top */
+  top: 0;
+  width: 100%;  /* full width */
+  display: flex;  /* flexbox for navbar layout */
+  justify-content: space-between;  /* space out the navbar items */
+  align-items: center;  /* vertically center items */
+  padding: 1rem 4rem;  /* padding inside navbar */
+  background: rgba(26, 0, 51, 0.95);  /* semi-transparent dark purple background */
+  backdrop-filter: blur(10px);  /* blurred background */
+  z-index: 1000;  /* ensure navbar is above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  /* shadow for depth */
+}
+
+/* Navbar logo styling */
+.nav-logo {
+  color: #fff;  /* white color for the logo */
+  text-decoration: none;  /* remove underline from logo */
+  font-size: 1.5rem;  /* size of the logo */
+  font-weight: 600;  /* bold weight for logo */
+}
+
+/* Navbar links container styling */
+.nav-links {
+  display: flex;  /* flexbox for navbar links */
+  gap: 2rem;  /* space between links */
+}
+
+/* Navbar link styling */
+.nav-links a {
+  color: #fff;  /* white text for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change */
+}
+
+/* Navbar link hover effect */
+.nav-links a:hover {
+  color: #9933ff;  /* purple color on hover */
+}
+
+/* Contact form container styling */
+.contact-container {
+  max-width: 800px;  /* limit width of the contact form */
+  margin: 8rem auto 4rem;  /* center the form and add margin */
+  padding: 2rem;  /* padding around the form */
+}
+
+/* Contact form styling */
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);  /* semi-transparent background */
+  border-radius: 15px;  /* rounded corners */
+  padding: 3rem;  /* padding inside the form */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* shadow for depth */
+  border-left: 4px solid #9933ff;  /* purple left border */
+}
+
+/* Form group styling (for each input/textarea) */
+.form-group {
+  margin-bottom: 1.5rem;  /* margin below each input/textarea */
+}
+
+/* Label styling for form elements */
+.form-group label {
+  display: block;  /* make labels block-level elements */
+  margin-bottom: 0.5rem;  /* space below labels */
+  color: #fff;  /* white text for labels */
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+  width: 100%;  /* make inputs/textarea take up full width */
+  padding: 0.8rem;  /* padding inside input fields */
+  background: rgba(255, 255, 255, 0.1);  /* semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2);  /* subtle border */
+  border-radius: 5px;  /* rounded corners */
+  color: #fff;  /* white text inside inputs */
+  font-size: 1rem;  /* font size for input/textarea */
+}
+
+/* Focus effect for inputs/textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;  /* remove outline */
+  border-color: #9933ff;  /* purple border on focus */
+}
+
+/* Submit button styling */
+.submit-btn {
+  background: #9933ff;  /* purple background */
+  color: #fff;  /* white text */
+  border: none;  /* remove border */
+  padding: 1rem 2rem;  /* padding inside the button */
+  border-radius: 5px;  /* rounded corners */
+  cursor: pointer;  /* pointer cursor on hover */
+  font-size: 1rem;  /* font size for the button */
+  transition: background 0.3s;  /* smooth background transition */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+  background: #7f1fe6;  /* darker purple background on hover */
+}
+
+/* Success message styling (hidden by default) */
+.success-message {
+  display: none;  /* hidden by default */
+  background: rgba(51, 255, 153, 0.1);  /* light green background */
+  border-left: 4px solid #33ff99;  /* green left border */
+  padding: 1rem;  /* padding inside the message box */
+  margin-top: 1rem;  /* space above the message */
+  border-radius: 5px;  /* rounded corners */
+}
+
+/* Error message styling (hidden by default) */
+.error-message {
+  display: none;  /* hidden by default */
+  background: rgba(255, 51, 102, 0.1);  /* light red background */
+  border-left: 4px solid #ff3366;  /* red left border */
+  padding: 1rem;  /* padding inside the message box */
+  margin-top: 1rem;  /* space above the message */
+  border-radius: 5px;  /* rounded corners */
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(26, 0, 51, 0.95);  /* dark purple background */
+  padding: 4rem 0 2rem;  /* padding around the footer */
+  margin-top: 4rem;  /* space above the footer */
+  backdrop-filter: blur(10px);  /* blurred background effect */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);  /* shadow for depth */
+}
+
+/* Footer content grid layout */
+.footer-content {
+  max-width: 1200px;  /* max width for the footer content */
+  margin: 0 auto;  /* center the content */
+  display: grid;  /* use grid for footer layout */
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  gap: 3rem;  /* space between footer sections */
+  padding: 0 2rem;  /* padding inside the footer */
+}
+
+/* Footer section styling */
+.footer-section {
+  display: flex;  /* use flexbox for footer sections */
+  flex-direction: column;  /* stack items vertically */
+  gap: 1rem;  /* space between items in each section */
+}
+
+/* Footer section heading styling */
+.footer-section h3 {
+  color: #9933ff;  /* purple color for section headings */
+  font-size: 1.2rem;  /* larger font size for section headings */
+  margin-bottom: 0.5rem;  /* space below the heading */
+}
+
+/* Footer section paragraph styling */
+.footer-section p {
+  color: #ccc;  /* light grey text for paragraphs */
+  line-height: 1.6;  /* increase line height for readability */
+  font-size: 0.9rem;  /* smaller font size for paragraphs */
+}
+
+/* Footer section link styling */
+.footer-section a {
+  color: #fff;  /* white color for links */
+  text-decoration: none;  /* remove underline from links */
+  transition: color 0.3s;  /* smooth transition for color change */
+  font-size: 0.9rem;  /* smaller font size for links */
+  display: block;  /* make links block-level elements */
+  margin-bottom: 0.5rem;  /* space below each link */
+}
+
+/* Footer link hover effect */
+.footer-section a:hover {
+  color: #9933ff;  /* purple color on hover */
+}
+
+/* Footer bottom section styling */
+.footer-bottom {
+  text-align: center;  /* center the text */
+  padding-top: 2rem;  /* padding inside the footer bottom */
+  margin-top: 2rem;  /* space above the footer bottom */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);  /* subtle top border */
+}
+
+/* Footer bottom paragraph styling */
+.footer-bottom p {
+  color: #888;  /* light grey color for footer bottom text */
+  font-size: 0.8rem;  /* smaller font size */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust footer layout to a single column on small screens */
+  .footer-content {
+      grid-template-columns: 1fr;  /* 1 column layout */
+      gap: 2rem;  /* reduce gap between footer sections */
+  }
+
+  /* Adjust padding inside footer for small screens */
+  .footer {
+      padding: 3rem 0 1.5rem;  /* reduce top and bottom padding */
+  }
+}

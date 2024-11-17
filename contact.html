@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Setting the character encoding and viewport for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title displayed on the browser tab -->
+    <title>Contact With Us</title>
+    
+    <!-- Link to external CSS file for styling the page -->
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Navigation bar with links to other pages -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Space Station</a> <!-- Logo link back to the homepage -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="chatbot_ai.html">GY AI</a>
+            <a href="topics.html">Topics</a>
+        </div>
+    </nav>
+
+    <!-- Main contact form container -->
+    <div class="contact-container">
+        <div class="contact-form">
+            <!-- Contact section heading and subheading -->
+            <h2>Contact Us</h2>
+            <p style="margin: 1rem 0">Have questions or feedback? We'd love to hear from you!</p>
+
+            <!-- Contact form with action on submission -->
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                
+                <!-- Name input field -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <!-- Email input field -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <!-- Subject input field -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <!-- Message input field (textarea) -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <!-- Submit button to send the message -->
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <!-- Success and error messages that appear after form submission -->
+            <div class="success-message" id="successMessage">
+                Your message has been sent successfully! We'll get back to you soon.
+            </div>
+            <div class="error-message" id="errorMessage">
+                There was an error sending your message. Please try again later.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section with additional information and links -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- About section in the footer -->
+            <div class="footer-section">
+                <h3>About Galaxy Youth</h3>
+                <p>Galaxy Youth is a passionate group of young space lovers dedicated to making space science accessible and exciting for everyone. Join our community of young explorers!</p>
+            </div>
+
+            <!-- Quick links section -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="topics.html#nasa_other_topics">NASA & Other Resources</a>
+                <a href="topics.html#vid">Videos For Learning About Space</a> <!-- Fixed typo from 'Leaaring' to 'Learning' -->
+                <a href="topics.html#ebooks">Digital Books</a>
+            </div>
+            
+            <!-- Other useful links section -->
+            <div class="footer-section">
+                <h3>Other</h3>
+                <a href="https://science.nasa.gov/learn/events-activities/">NASA Youth Events</a>
+                <a href="commuinty.html">Community</a> <!-- Fixed typo from 'commuinty' to 'community' -->
+                <a href="nasa-eye-exolpanets.html">Exoplanets Explorer</a> <!-- Fixed typo from 'Exolporer' to 'Explorer' -->
+            </div>
+        </div>
+
+        <!-- Footer bottom section with copyright information -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Galaxy Youth Space Station. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file to handle form submission and other interactive features -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
